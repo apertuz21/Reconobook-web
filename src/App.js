@@ -4,6 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import "./App.css";
+import { drawRect } from "./utilities";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
+      drawRect(obj, ctx); 
     }
   };
 
