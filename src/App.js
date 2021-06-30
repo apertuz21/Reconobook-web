@@ -35,6 +35,16 @@ function App() {
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
+
+      // Set canvas height and width
+      canvasRef.current.width = videoWidth;
+      canvasRef.current.height = videoHeight;
+
+      // Make Detections
+      const obj = await net.detect(video);
+
+      // Draw mesh
+      const ctx = canvasRef.current.getContext("2d");
     }
   };
 
