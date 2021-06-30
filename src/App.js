@@ -35,12 +35,6 @@ function App() {
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
-
-     
-
-      
-
-      
     }
   };
 
@@ -52,10 +46,32 @@ function App() {
         <Webcam
           ref={webcamRef}
           muted={true} 
+          style={{
+            position: "absolute",
+            marginLeft: "auto",
+            marginRight: "auto",
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            zindex: 9,
+            width: 640,
+            height: 480,
+          }}
         />
 
         <canvas
           ref={canvasRef}
+          style={{
+            position: "absolute",
+            marginLeft: "auto",
+            marginRight: "auto",
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            zindex: 8,
+            width: 640,
+            height: 480,
+          }}
         />
       </header>
     </div>
